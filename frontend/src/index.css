@@ -1,1 +1,58 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  background: radial-gradient(circle at 20% 10%, #dff9ee, #f2fbf7 45%, #f8fafc);
+}
+
+.theme-vibrant-dark body,
+.theme-vibrant-dark {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(16, 185, 129, 0.28), transparent 35%),
+    radial-gradient(circle at 85% 20%, rgba(20, 184, 166, 0.24), transparent 40%),
+    radial-gradient(circle at 50% 120%, rgba(15, 23, 42, 0.98), transparent 55%),
+    linear-gradient(140deg, #020617 0%, #052e2b 42%, #0f172a 100%);
+}
+
+.ripple-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ripple-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0));
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ripple-btn:hover::after {
+  animation: herb-ripple 640ms ease-out;
+}
+
+.ripple-btn:focus-visible {
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.25),
+    0 0 0 4px rgba(16, 185, 129, 0.45);
+}
+
+@keyframes herb-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.7;
+  }
+  100% {
+    width: 240px;
+    height: 240px;
+    opacity: 0;
+  }
+}

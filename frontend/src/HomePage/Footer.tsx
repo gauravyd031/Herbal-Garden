@@ -2,7 +2,11 @@ import { Leaf } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { footerLinks, socialLinks } from './data'
 
-const Footer = () => {
+type FooterProps = {
+  learningMode: 'Patient' | 'Student'
+}
+
+const Footer = ({ learningMode }: FooterProps) => {
   return (
     <footer className="relative mt-44 overflow-hidden px-4 pb-8 sm:px-6 lg:px-8">
       {/* 3D gradient atmosphere */}
@@ -158,7 +162,9 @@ const Footer = () => {
                   by a Full Stack Developer
                 </p>
                 <p className="mt-2 text-xs font-medium text-slate-300/65">
-                  For educational purposes only. Always consult healthcare professionals.
+                  {learningMode === 'Student'
+                    ? 'Built as an educational tool for Ayurvedic students. For academic reference only.'
+                    : 'For educational purposes only. Always consult healthcare professionals.'}
                 </p>
               </motion.div>
             </div>
