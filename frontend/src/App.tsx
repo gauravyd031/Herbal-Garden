@@ -1,8 +1,8 @@
-import HomePage from './HomePage'
+import AppRouter from './app/router'
 import './App.css'
 
 function App() {
-  return <HomePage />
+  return <AppRouter />
 }
 
 export default App

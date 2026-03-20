@@ -1,6 +1,6 @@
 import { GraduationCap } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { motionTokens, studyModules } from './data'
+import { motionTokens, studyModules } from '../data/home.mock'
 
 const StudyModules = () => {
   return (

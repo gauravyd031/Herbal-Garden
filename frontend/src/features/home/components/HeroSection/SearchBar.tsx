@@ -6,7 +6,7 @@ import {
   patientConversationalPrompts,
   patientSearchFilters,
   searchFilters,
-} from '../data'
+} from '../../data/home.mock'
 
 type SearchBarProps = {
   value: string

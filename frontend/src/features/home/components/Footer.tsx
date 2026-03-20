@@ -1,6 +1,6 @@
 import { Leaf } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { footerLinks, socialLinks } from './data'
+import { footerLinks, socialLinks } from '../data/home.mock'
 
 type FooterProps = {
   learningMode: 'Patient' | 'Student'

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { features, motionTokens, patientFeatures } from './data'
+import { features, motionTokens, patientFeatures } from '../data/home.mock'
 
 type WhySectionProps = {
   learningMode: 'Patient' | 'Student'

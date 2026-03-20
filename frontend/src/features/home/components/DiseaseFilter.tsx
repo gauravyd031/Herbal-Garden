@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { diseases } from './data'
+import { diseases } from '../data/home.mock'
 
 type DiseaseFilterProps = {
   activeDisease: string

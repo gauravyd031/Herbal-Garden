@@ -1,6 +1,6 @@
 import { Sparkles } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { ImageWithFallback } from '../../components/figma/ImageWithFallback'
+import { ImageWithFallback } from '../../../../shared/ui/ImageWithFallback'
 import SearchBar from './SearchBar'
 
 type HeroSectionProps = {

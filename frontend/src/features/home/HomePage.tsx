@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
-import Navbar from './Navbar'
-import HeroSection from './HeroSection'
-import FeaturedHerbs from './FeaturedHerbs'
-import StudyModules from './StudyModules'
-import DiseaseFilter from './DiseaseFilter'
-import WhySection from './WhySection'
-import Footer from './Footer'
-import FloatingOrb from './FloatingOrb'
-import { backgroundOrbs } from './data'
+import Navbar from './components/Navbar'
+import HeroSection from './components/HeroSection'
+import FeaturedHerbs from './components/FeaturedHerbs'
+import StudyModules from './components/StudyModules'
+import DiseaseFilter from './components/DiseaseFilter'
+import WhySection from './components/WhySection'
+import Footer from './components/Footer'
+import FloatingOrb from './components/FloatingOrb'
+import { backgroundOrbs } from './data/home.mock'
 
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState('')

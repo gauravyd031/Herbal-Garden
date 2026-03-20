@@ -1,6 +1,6 @@
 import { Leaf } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { navItems } from './data'
+import { navItems } from '../data/home.mock'
 import ThemeToggle from './ThemeToggle'
 
 type NavbarProps = {

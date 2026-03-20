@@ -1,7 +1,14 @@
 import { AlertCircle, ChevronRight, ScrollText, ShieldCheck } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { ImageWithFallback } from '../components/figma/ImageWithFallback'
-import { featuredHerbs } from './data'
+import { ImageWithFallback } from '../../../shared/ui/ImageWithFallback'
+import { featuredHerbs } from '../data/home.mock'
+
+const herbDetailRoutes: Record<string, string> = {
+  Tulsi: 'tulsi',
+  Haridra: 'turmeric',
+  Shunthi: 'ginger',
+  Jatamansi: 'jatamansi',
+}
 
 type FeaturedHerbsProps = {
   searchQuery: string
@@ -77,6 +84,15 @@ const FeaturedHerbs = ({
               ? 'Structured medicinal plant profiles for student revision and clinical learning'
               : "Discover nature's healing power"}
           </p>
+          <div className="flex justify-center">
+            <a
+              href="/plants"
+              className="ripple-btn inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-emerald-700 to-teal-700 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-900/15 transition hover:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+            >
+              More Plants
+              <ChevronRight className="h-4 w-4" />
+            </a>
+          </div>
         </motion.div>
 
         <div className="mb-8 rounded-3xl border border-emerald-300/40 bg-white/65 p-5 backdrop-blur-2xl dark:border-emerald-200/20 dark:bg-slate-900/45 sm:p-6">
@@ -209,10 +225,13 @@ const FeaturedHerbs = ({
                     </span>
                   </div>
 
-                  <button className="ripple-btn inline-flex items-center gap-1 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-700 px-4 py-2 text-sm font-semibold text-white transition-all hover:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900">
+                  <a
+                    href={`/plant/${herbDetailRoutes[herb.name] ?? 'ashwagandha'}`}
+                    className="ripple-btn inline-flex items-center gap-1 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-700 px-4 py-2 text-sm font-semibold text-white transition-all hover:gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+                  >
                     Details
                     <ChevronRight className="h-4 w-4" />
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.article>
