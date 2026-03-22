@@ -36,6 +36,14 @@ const HomePage = () => {
     localStorage.setItem('herbal-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 
+  const handleNavChange = (value: string) => {
+    setActiveNav(value)
+
+    if (value === 'Explore') {
+      window.location.href = '/plants'
+    }
+  }
+
   return (
     <div
       className={`relative min-h-screen overflow-hidden text-slate-900 transition-colors dark:text-slate-100 ${
@@ -61,7 +69,7 @@ const HomePage = () => {
       >
         <Navbar
           activeNav={activeNav}
-          onChange={setActiveNav}
+          onChange={handleNavChange}
           isDark={isDarkMode}
           onToggleTheme={() => setIsDarkMode((prev) => !prev)}
         />

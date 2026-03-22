@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { fetchPlants } from '../api/fetchPlants'
+import Footer from '../../home/components/Footer'
 import FilterPanel from '../components/FilterPanel'
 import PlantGrid from '../components/PlantGrid'
 import SearchBar from '../components/SearchBar'
@@ -103,6 +104,8 @@ const PlantListingPage = () => {
           </div>
         </section>
       </div>
+
+      <Footer learningMode="Student" />
     </div>
   )
 }

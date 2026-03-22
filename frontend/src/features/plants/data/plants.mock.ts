@@ -52,19 +52,19 @@ const ashwagandhaDetail: PlantDetail = {
   },
   identification: {
     wholePlantDescription:
-      'A small branching perennial shrub, usually 35 to 75 cm tall, with dull green foliage and an understated bushy habit.',
+      'A small branching perennial shrub, usually 35 to 75 cm tall, with dull green foliage, soft pubescence, and a somewhat understated bushy habit that can be recognized by its papery fruiting calyx and medicinal root.',
     characteristics: {
       height: 'Approximately 35-75 cm in mature growth.',
       leaves:
-        'Simple, ovate to broadly elliptic, dull green, softly pubescent, and somewhat velvety in texture.',
+        'Simple, ovate to broadly elliptic, dull green, softly pubescent, and slightly velvety to the touch; the leaves feel tender rather than leathery and are not strongly aromatic when crushed.',
       flowers:
-        'Small, inconspicuous, greenish to greenish-yellow flowers borne in the leaf axils.',
+        'Small, inconspicuous, greenish to greenish-yellow flowers borne in the leaf axils, often overlooked unless observed closely during active growth.',
       fruit:
-        'Orange-red berry enclosed in a papery inflated calyx, useful as a field marker.',
+        'Orange-red berry enclosed in a papery inflated calyx, an especially helpful visual marker when the plant is fruiting.',
       root:
-        'Stout cylindrical root, buff to light brown externally and whitish internally; primary medicinal part.',
+        'Stout cylindrical root, buff to light brown externally and whitish internally; firm, fibrous, and the principal medicinal part used in practice.',
       smell:
-        'Characteristic horse-like odor from the root, reflected in the name Ashwagandha.',
+        'Characteristic horse-like odor from the root, with a slightly bitter, earthy taste that supports real-world identification.',
     },
     habitat:
       'Thrives in dry subtropical climates, especially in sandy or well-drained soils with strong sunlight.',
@@ -82,10 +82,17 @@ const ashwagandhaDetail: PlantDetail = {
     ],
   },
   snapshot: {
-    rasa: ['Tikta', 'Kashaya', 'Madhura'],
-    guna: ['Laghu', 'Snigdha'],
-    virya: 'Ushna',
-    vipaka: 'Madhura',
+    rasa: [
+      'Tikta (bitter; reduces heaviness and clears stagnation)',
+      'Kashaya (astringent; tones and stabilizes tissues)',
+      'Madhura (sweet; nourishes and rebuilds)',
+    ],
+    guna: [
+      'Laghu (light; supports digestibility and non-cloying action)',
+      'Snigdha (unctuous; nourishes dryness and depletion)',
+    ],
+    virya: 'Ushna (warming potency that supports circulation, metabolism, and Vata-Kapha reduction)',
+    vipaka: 'Madhura (sweet post-digestive effect that favors long-term nourishment and tissue restoration)',
     prabhava: 'Balya and Rasayana action with restorative nervous-system support.',
     doshaEffect:
       'Primarily pacifies Vata and Kapha; may aggravate Pitta in excess, hot climates, or heat-dominant constitutions.',
@@ -97,43 +104,43 @@ const ashwagandhaDetail: PlantDetail = {
   clinicalIndications: [
     {
       condition: 'Stress and Anxiety',
-      description:
-        'Used to calm nervous-system overactivity, improve resilience under chronic stress, and reduce the exhaustion associated with prolonged mental strain.',
+        description:
+          'Used to calm nervous-system overactivity, improve resilience under chronic stress, and reduce exhaustion associated with prolonged mental strain. Its nourishing Snigdha quality and sweet post-digestive effect help counter the depletion that often accompanies anxious, overworked states.',
       partUsed: 'Root',
       effectivenessLevel: 'Moderate support',
     },
     {
       condition: 'Insomnia',
-      description:
-        'Supports sleep initiation and overall sleep quality, especially where poor sleep is linked to worry, fatigue, or Vata aggravation.',
+        description:
+          'Supports sleep initiation and overall sleep quality, especially where poor sleep is linked to worry, fatigue, or Vata aggravation. By grounding the system and reducing excessive nervous excitation, it helps make sleep more restorative rather than merely sedating.',
       partUsed: 'Root',
       effectivenessLevel: 'Moderate support',
     },
     {
       condition: 'General Weakness and Convalescence',
-      description:
-        'Traditionally given in weakness, tissue depletion, low stamina, and slow post-illness recovery, often with milk or ghee.',
+        description:
+          'Traditionally given in weakness, tissue depletion, low stamina, and slow post-illness recovery, often with milk or ghee. Its Rasayana and Balya actions support tissue rebuilding, endurance, and the gradual return of strength after chronic illness or overexertion.',
       partUsed: 'Root',
       effectivenessLevel: 'Strong traditional use',
     },
     {
       condition: 'Immunity and Recovery',
-      description:
-        'Supports general resilience and recovery in stress-related or chronic low-energy states rather than acting as an acute anti-infective herb.',
+        description:
+          'Supports general resilience and recovery in stress-related or chronic low-energy states rather than acting as an acute anti-infective herb. It is most relevant when immune fragility is linked with exhaustion, poor sleep, or depleted Ojas-like vitality.',
       partUsed: 'Root',
       effectivenessLevel: 'Traditional support',
     },
     {
       condition: 'Joint Disorders',
-      description:
-        'Used in chronic inflammatory or degenerative conditions where pain coexists with weakness, fatigue, or tissue depletion.',
+        description:
+          'Used in chronic inflammatory or degenerative conditions where pain coexists with weakness, fatigue, or tissue depletion. The herb is valued less as a rapid analgesic and more as a strengthening support in patients whose joints are affected by long-term Vata aggravation.',
       partUsed: 'Root',
       effectivenessLevel: 'Supportive use',
     },
     {
       condition: 'Reproductive Health',
-      description:
-        'Included in Vajikarana-oriented care to support vitality, endurance, and reproductive strength in exhausted constitutions.',
+        description:
+          'Included in Vajikarana-oriented care to support vitality, endurance, and reproductive strength in exhausted constitutions. It is chosen where sexual or reproductive weakness is associated with nervous depletion, low stamina, and poor recovery capacity.',
       partUsed: 'Root',
       effectivenessLevel: 'Strong traditional use',
     },
@@ -142,17 +149,17 @@ const ashwagandhaDetail: PlantDetail = {
     vata: {
       effect: 'Pacifies',
       explanation:
-        'Its nourishing, stabilizing, and restorative profile directly addresses dryness, weakness, anxiety, fatigue, and sleep disturbance associated with aggravated Vata.',
+        'Its Snigdha guna, Madhura Vipaka, and restorative Rasayana nature directly address dryness, weakness, anxiety, fatigue, and sleep disturbance associated with aggravated Vata.',
     },
     kapha: {
       effect: 'Generally pacifies',
       explanation:
-        'The hot potency helps counter coldness and sluggishness, though its building quality means use should be individualized in heavy Kapha states.',
+        'Its Ushna Virya helps counter Kapha coldness, sluggishness, and low metabolic drive, though the nourishing side of the herb means use should still be individualized in very heavy or congestive Kapha states.',
     },
     pitta: {
       effect: 'May aggravate',
       explanation:
-        'Its Ushna Virya can increase heat in Pitta-dominant individuals, especially with excess use, inflammatory conditions, or hot weather.',
+        'Its Ushna Virya can increase heat in Pitta-dominant individuals, especially with excess use, active inflammation, acidity, or hot weather, even though its restorative profile may still be useful in selected cases.',
     },
   },
   dravyagunaBreakdown: [
@@ -160,31 +167,33 @@ const ashwagandhaDetail: PlantDetail = {
       name: 'Rasa',
       meaning: 'Tikta, Kashaya, and Madhura tastes.',
       function:
-        'Balances clearing and toning effects with nourishment and rebuilding support.',
+        'Balances mild clearing and toning effects with deeper nourishment and rebuilding support, helping the herb act without becoming too harsh or overly reducing.',
       clinicalRelevance:
-        'Helps explain why Ashwagandha is both restorative and balancing instead of merely stimulating.',
+        'Helps explain why Ashwagandha is useful in stress, weakness, and recovery states where the patient needs restoration and steadiness instead of a purely stimulating tonic.',
     },
     {
       name: 'Guna',
       meaning: 'Laghu and Snigdha qualities.',
       function:
-        'Maintains digestibility while also providing unctuous, tissue-supportive nourishment.',
+        'Maintains digestibility while also providing unctuous, tissue-supportive nourishment that reduces dryness, irritability, and instability in depleted constitutions.',
       clinicalRelevance:
-        'Useful in dry, depleted, fatigued constitutions needing rebuilding without excessive heaviness.',
+        'Useful in dry, depleted, fatigued constitutions needing rebuilding without excessive heaviness, such as chronic stress with poor sleep and low stamina.',
     },
     {
       name: 'Virya',
       meaning: 'Ushna or hot potency.',
-      function: 'Supports warmth, circulation, and metabolic activation.',
+      function:
+        'Supports warmth, circulation, and metabolic activation, helping the herb move beyond passive nourishment into active restoration.',
       clinicalRelevance:
-        'Favors Vata-Kapha states but requires caution in heat-dominant Pitta conditions.',
+        'Favors Vata-Kapha states with coldness and low energy, but requires caution in heat-dominant Pitta conditions, gastritis, or hot seasons.',
     },
     {
       name: 'Vipaka',
       meaning: 'Madhura or sweet post-digestive effect.',
-      function: 'Supports long-term nourishment and anabolic tissue recovery.',
+      function:
+        'Supports long-term nourishment and anabolic tissue recovery after digestion, reinforcing the herb’s strengthening and restorative effect over time.',
       clinicalRelevance:
-        'Relevant in prolonged restorative use, debility, and convalescence.',
+        'Relevant in prolonged restorative use, debility, convalescence, and reproductive depletion where sustained rebuilding is required.',
     },
   ],
   classicalReferences: [
@@ -237,21 +246,21 @@ const ashwagandhaDetail: PlantDetail = {
     {
       studyType: 'Systematic review and meta-analysis',
       findings:
-        'Associated with reduced perceived stress and anxiety compared with placebo, though heterogeneity and certainty limitations remain.',
+        'Associated with reduced perceived stress and anxiety compared with placebo, though heterogeneity and certainty limitations remain. Clinically, this matters because Ashwagandha appears most relevant where chronic stress is paired with fatigue, poor recovery, and sleep disturbance.',
       source: 'Salve et al., 2022',
       strength: 'Moderate',
     },
     {
       studyType: 'Randomized double-blind placebo-controlled trial',
       findings:
-        'Improved sleep quality, sleep onset latency, and anxiety scores in adults with insomnia and anxiety symptoms.',
+        'Improved sleep quality, sleep onset latency, and anxiety scores in adults with insomnia and anxiety symptoms. This supports its practical role as a restorative herb in stress-linked sleep disturbance rather than as a simple sedative.',
       source: 'Langade et al., 2019',
       strength: 'Moderate',
     },
     {
       studyType: 'Systematic review and meta-analysis on sleep',
       findings:
-        'Showed a small but significant positive effect on sleep, especially in insomnia subgroups and with higher-dose standardized extracts.',
+        'Showed a small but significant positive effect on sleep, especially in insomnia subgroups and with higher-dose standardized extracts. The implication is that benefit may depend on patient selection, extract quality, and duration of use.',
       source: 'Cheah et al., 2021',
       strength: 'Moderate',
     },
@@ -263,9 +272,9 @@ const ashwagandhaDetail: PlantDetail = {
       'Known hypersensitivity to Ashwagandha preparations',
     ],
     cautions: [
-      'Use carefully in hyperthyroid states or thyroid medication users.',
-      'Use cautiously in autoimmune conditions and before surgery.',
-      'Avoid excess use in strong Pitta constitutions or active gastritis.',
+      'Use carefully in hyperthyroid states or thyroid medication users because thyroid parameters may be affected in susceptible individuals.',
+      'Use cautiously in autoimmune conditions and before surgery, particularly when immune-modulating or sedative effects may be clinically relevant.',
+      'Avoid excess use in strong Pitta constitutions or active gastritis because the warming potency may worsen heat, burning, or irritation.',
     ],
     interactions: [
       'Sedatives and CNS depressants',
@@ -281,14 +290,19 @@ const ashwagandhaDetail: PlantDetail = {
         notes: 'Often given in divided doses with milk, ghee, or honey.',
       },
       {
-        form: 'Standardized extract',
-        amount: '300 mg twice daily',
-        notes: 'Common study range; depends on extract strength and withanolide standardization.',
+        form: 'Churna',
+        amount: '3-6 g daily',
+        notes: 'Often given in divided doses with milk, ghee, or honey; best started at the lower end in heat-sensitive or weak-digestion patients.',
       },
       {
         form: 'Kwatha or decoction',
         amount: 'Varies by formulation',
-        notes: 'Less common in modern retail products; dosing should follow practitioner guidance.',
+        notes: 'Less common in modern retail products; dosing should follow practitioner guidance because concentration can vary substantially.',
+      },
+      {
+        form: 'Standardized extract',
+        amount: '300 mg twice daily',
+        notes: 'Common study range; actual use should reflect extract strength, withanolide standardization, and patient tolerance.',
       },
     ],
   },
@@ -341,16 +355,16 @@ export const plantDetailsMockData: PlantDetail[] = [
     },
     identification: {
       wholePlantDescription:
-        'An erect, highly aromatic branching herb or undershrub with green to purple tinged stems and opposite leaves.',
+        'An erect, highly aromatic branching herb or undershrub with green to purple-tinged stems, opposite leaves, and a distinctly sacred-basil scent that becomes pronounced when touched.',
       characteristics: {
         height: 'Usually 30-90 cm depending on cultivation and climate.',
         leaves:
-          'Opposite, ovate, softly toothed, highly aromatic leaves with glandular texture.',
+          'Opposite, ovate, softly toothed, highly aromatic leaves with a glandular texture; the surface feels slightly soft and releases a clove-like scent on crushing.',
         flowers:
           'Small purplish or whitish flowers arranged in terminal racemes.',
         fruit: 'Tiny nutlets formed after flowering.',
         root: 'Slender fibrous root system, not the primary medicinal focus.',
-        smell: 'Strong clove-like, spicy, sweet aromatic odor.',
+        smell: 'Strong clove-like, spicy, sweet aromatic odor with a mildly pungent herbal taste.',
       },
       habitat:
         'Commonly cultivated around homes and temples; thrives in warm, sunny, well-drained environments.',
@@ -363,10 +377,10 @@ export const plantDetailsMockData: PlantDetail[] = [
       ],
     },
     snapshot: {
-      rasa: ['Katu', 'Tikta'],
-      guna: ['Laghu', 'Ruksha'],
-      virya: 'Ushna',
-      vipaka: 'Katu',
+      rasa: ['Katu (pungent; disperses and stimulates)', 'Tikta (bitter; lightens and clears)'],
+      guna: ['Laghu (light; reduces heaviness)', 'Ruksha (dry; checks excess moisture and Kapha)'],
+      virya: 'Ushna (warming potency that opens channels and reduces cold stagnation)',
+      vipaka: 'Katu (pungent post-digestive effect that sustains lightness and Kapha reduction)',
       prabhava: 'Pranavaha support with aromatic clearing action.',
       doshaEffect: 'Pacifies Kapha and Vata; may increase Pitta in excess.',
     },
@@ -378,21 +392,21 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         condition: 'Cold and Cough',
         description:
-          'Its warming aromatic action helps reduce congestion, support expectoration, and improve comfort during Kapha-dominant upper respiratory complaints.',
+          'Its warming aromatic action helps reduce congestion, support expectoration, and improve comfort during Kapha-dominant upper respiratory complaints. By combining pungent taste with Ushna Virya, it helps mobilize stuck mucus and improve respiratory clarity.',
         partUsed: 'Leaf',
         effectivenessLevel: 'Strong traditional use',
       },
       {
         condition: 'Stress Support',
         description:
-          'Frequently used in daily infusions to improve mental steadiness and resilience under mild stress.',
+          'Frequently used in daily infusions to improve mental steadiness and resilience under mild stress. Its aromatic nature can gently lift dullness while supporting clearer breathing and a more settled subjective sense of well-being.',
         partUsed: 'Leaf',
         effectivenessLevel: 'Supportive use',
       },
       {
         condition: 'Digestive Sluggishness',
         description:
-          'Useful in cold, heavy digestion with mild bloating and low digestive responsiveness.',
+          'Useful in cold, heavy digestion with mild bloating and low digestive responsiveness. The herb helps stimulate appetite and light digestive movement when Kapha dampness is slowing the gut.',
         partUsed: 'Leaf',
       },
     ],
@@ -400,7 +414,7 @@ export const plantDetailsMockData: PlantDetail[] = [
       vata: {
         effect: 'May pacify mildly',
         explanation:
-          'Its warming nature can help Vata when coldness and respiratory congestion are present, though excess dryness can aggravate depleted Vata.',
+          'Its warming nature can help Vata when coldness, sluggish circulation, or respiratory congestion are present, though the Ruksha quality can aggravate already dry or depleted Vata if overused.',
       },
       kapha: {
         effect: 'Pacifies',
@@ -410,35 +424,39 @@ export const plantDetailsMockData: PlantDetail[] = [
       pitta: {
         effect: 'May aggravate in excess',
         explanation:
-          'Its hot, pungent profile can increase heat in sensitive Pitta constitutions if overused.',
+          'Its hot, pungent profile can increase heat in sensitive Pitta constitutions if overused, especially in patients with burning sensation, acidity, or excessive internal heat.',
       },
     },
     dravyagunaBreakdown: [
       {
         name: 'Rasa',
         meaning: 'Katu and Tikta tastes.',
-        function: 'Clears Kapha, stimulates movement, and reduces heaviness.',
+        function:
+          'Clears Kapha, stimulates movement, and reduces heaviness by encouraging warmth, flow, and subtle channel opening in the respiratory and digestive systems.',
         clinicalRelevance:
           'Supports use in congestion, sluggish digestion, and dullness with mucus accumulation.',
       },
       {
         name: 'Guna',
         meaning: 'Laghu and Ruksha qualities.',
-        function: 'Lightens and dries excessive moisture.',
+        function:
+          'Lightens and dries excessive moisture, helping counter mucus, dampness, and lethargy without creating a heavy residue.',
         clinicalRelevance:
           'Useful in Kapha excess but should be balanced in very dry constitutions.',
       },
       {
         name: 'Virya',
         meaning: 'Ushna potency.',
-        function: 'Warms, stimulates, and disperses stagnation.',
+        function:
+          'Warms, stimulates, and disperses stagnation, especially where coldness is trapping Kapha in the chest or slowing digestion.',
         clinicalRelevance:
           'Important in respiratory and cold-heavy presentations.',
       },
       {
         name: 'Vipaka',
         meaning: 'Katu post-digestive effect.',
-        function: 'Sustains reducing and stimulating action after digestion.',
+        function:
+          'Sustains reducing and stimulating action after digestion so the herb continues to lighten Kapha even beyond the immediate aromatic effect.',
         clinicalRelevance:
           'Supports long-term Kapha reduction in daily use.',
       },
@@ -475,7 +493,7 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         studyType: 'Review',
         findings:
-          'Tulsi shows promise in stress modulation, metabolic balance, and immune-support contexts, though many studies are small and heterogeneous.',
+          'Tulsi shows promise in stress modulation, metabolic balance, and immune-support contexts, though many studies are small and heterogeneous. Clinically this suggests potential as a daily supportive herb, but not yet as a strongly evidence-backed stand-alone therapy.',
         source: 'Integrative herbal reviews',
         strength: 'Moderate',
       },
@@ -483,20 +501,20 @@ export const plantDetailsMockData: PlantDetail[] = [
     safetyDosage: {
       contraindications: [],
       cautions: [
-        'Use in moderation in heat-dominant constitutions.',
-        'Concentrated extracts should be individualized in sensitive patients.',
+        'Use in moderation in heat-dominant constitutions because its warming pungency may aggravate burning or irritability.',
+        'Concentrated extracts should be individualized in sensitive patients since household tea use and high-strength extracts do not have equivalent physiological impact.',
       ],
       interactions: ['Potential additive effects with glucose-lowering regimens'],
       dosage: [
         {
           form: 'Leaf infusion',
           amount: '1-2 cups daily',
-          notes: 'Common household preparation for routine use.',
+          notes: 'Common household preparation for routine use, especially in mild stress or seasonal respiratory support.',
         },
         {
           form: 'Fresh juice',
           amount: 'Small practitioner-guided quantities',
-          notes: 'Traditionally used more acutely for respiratory support.',
+          notes: 'Traditionally used more acutely for respiratory support and should usually be kept to modest, practitioner-guided amounts.',
         },
       ],
     },
@@ -544,14 +562,14 @@ export const plantDetailsMockData: PlantDetail[] = [
     },
     identification: {
       wholePlantDescription:
-        'A rhizomatous perennial with broad tropical leaves and underground orange-yellow rhizomes.',
+        'A rhizomatous perennial with broad tropical leaves and underground orange-yellow rhizomes whose staining color, earthy aroma, and dense flesh make it easy to recognize.',
       characteristics: {
         height: 'Usually 60-100 cm.',
         leaves: 'Large lanceolate leaves arising in clumps from the rhizome.',
         flowers: 'Pale yellow to whitish flowers on a spike-like inflorescence.',
         fruit: 'Rarely emphasized in common medicinal identification.',
-        root: 'Bright orange-yellow rhizome with strong staining property.',
-        smell: 'Earthy, warm, slightly bitter-spicy aroma.',
+        root: 'Bright orange-yellow rhizome with strong staining property, dense interior, and distinctly bitter-spicy taste.',
+        smell: 'Earthy, warm, slightly bitter-spicy aroma with a dry pungent after-note.',
       },
       habitat:
         'Cultivated in warm humid tropical climates with fertile, well-drained soil.',
@@ -564,10 +582,10 @@ export const plantDetailsMockData: PlantDetail[] = [
       ],
     },
     snapshot: {
-      rasa: ['Tikta', 'Katu'],
-      guna: ['Laghu', 'Ruksha'],
-      virya: 'Ushna',
-      vipaka: 'Katu',
+      rasa: ['Tikta (bitter; clears and reduces)', 'Katu (pungent; stimulates and penetrates)'],
+      guna: ['Laghu (light; reduces heaviness)', 'Ruksha (dry; checks excessive oiliness and Kapha)'],
+      virya: 'Ushna (warming potency that stimulates circulation and metabolic responsiveness)',
+      vipaka: 'Katu (pungent post-digestive effect that sustains reducing and scraping action)',
       prabhava: 'Lekhana and complexion-supportive action.',
       doshaEffect: 'Generally reduces Kapha and supports Pitta-Kapha balance when properly used.',
     },
@@ -579,21 +597,21 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         condition: 'Inflammatory Conditions',
         description:
-          'Used to support management of chronic low-grade inflammatory patterns and tissue irritation.',
+          'Used to support management of chronic low-grade inflammatory patterns and tissue irritation. Its bitter-pungent profile helps reduce stagnation and supports cleaner metabolic handling in tissues burdened by Ama-like accumulation.',
         partUsed: 'Rhizome',
         effectivenessLevel: 'Moderate support',
       },
       {
         condition: 'Skin Disorders',
         description:
-          'Traditionally applied internally and externally in itching, discoloration, and inflammatory skin complaints.',
+          'Traditionally applied internally and externally in itching, discoloration, and inflammatory skin complaints. Its combination of cleansing, complexion-supportive, and reducing actions explains its long association with skin care in Ayurveda.',
         partUsed: 'Rhizome',
         effectivenessLevel: 'Strong traditional use',
       },
       {
         condition: 'Metabolic Sluggishness',
         description:
-          'Included where Kapha-related heaviness and impaired metabolic responsiveness are present.',
+          'Included where Kapha-related heaviness and impaired metabolic responsiveness are present. By stimulating metabolic clarity without being a heavy tonic, it supports long-term correction rather than only symptomatic relief.',
         partUsed: 'Rhizome',
       },
     ],
@@ -601,7 +619,7 @@ export const plantDetailsMockData: PlantDetail[] = [
       vata: {
         effect: 'May require balancing',
         explanation:
-          'The drying quality can aggravate Vata unless given with suitable anupana or in mixed formulations.',
+          'The drying Ruksha quality can aggravate Vata unless given with suitable anupana such as ghee or in mixed formulations that soften its reducing nature.',
       },
       kapha: {
         effect: 'Pacifies',
@@ -611,32 +629,36 @@ export const plantDetailsMockData: PlantDetail[] = [
       pitta: {
         effect: 'Context-dependent',
         explanation:
-          'Although heating, it is also used in blood and skin contexts; tolerance depends on constitution and formulation.',
+          'Although heating, it is also used in blood and skin contexts; tolerance depends on constitution, dose, and whether the preparation is balanced with cooling or unctuous substances.',
       },
     },
     dravyagunaBreakdown: [
       {
         name: 'Rasa',
         meaning: 'Tikta and Katu tastes.',
-        function: 'Supports clearing, drying, and stimulating action.',
+        function:
+          'Supports clearing, drying, and stimulating action by reducing metabolic stagnation, excess secretions, and inflammatory burden.',
         clinicalRelevance: 'Useful in inflammatory, Kapha, and skin-oriented indications.',
       },
       {
         name: 'Guna',
         meaning: 'Laghu and Ruksha qualities.',
-        function: 'Reduces heaviness and excessive oiliness.',
+        function:
+          'Reduces heaviness and excessive oiliness, helping tissues that are damp, sluggish, or congested become more metabolically responsive.',
         clinicalRelevance: 'Supports use in metabolic and Kapha-dominant states.',
       },
       {
         name: 'Virya',
         meaning: 'Ushna potency.',
-        function: 'Promotes circulation and metabolic activation.',
+        function:
+          'Promotes circulation and metabolic activation, improving movement in tissues that are inflamed, stagnant, or poorly perfused.',
         clinicalRelevance: 'Important in sluggish inflammatory conditions.',
       },
       {
         name: 'Vipaka',
         meaning: 'Katu post-digestive effect.',
-        function: 'Maintains reducing and drying effect after digestion.',
+        function:
+          'Maintains reducing and drying effect after digestion, so the herb continues to oppose Kapha and Ama-like heaviness beyond the initial dose.',
         clinicalRelevance: 'Useful where persistent Kapha reduction is needed.',
       },
     ],
@@ -671,7 +693,7 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         studyType: 'Systematic reviews',
         findings:
-          'Curcumin-rich turmeric preparations show moderate evidence in inflammatory and joint-support settings, though formulation quality matters greatly.',
+          'Curcumin-rich turmeric preparations show moderate evidence in inflammatory and joint-support settings, though formulation quality matters greatly. This matters clinically because benefit depends not just on the herb but on bioavailability, dose, and preparation type.',
         source: 'Clinical review literature',
         strength: 'Moderate',
       },
@@ -679,20 +701,20 @@ export const plantDetailsMockData: PlantDetail[] = [
     safetyDosage: {
       contraindications: ['Use cautiously in active gallbladder obstruction'],
       cautions: [
-        'High-dose extracts may irritate sensitive digestion.',
-        'Use caution with blood-thinning therapies.',
+        'High-dose extracts may irritate sensitive digestion, especially in patients with dryness, burning, or gastric irritation.',
+        'Use caution with blood-thinning therapies because concentrated turmeric products may have additive effects in susceptible patients.',
       ],
       interactions: ['Anticoagulants', 'Antiplatelet drugs'],
       dosage: [
         {
           form: 'Churna',
           amount: '1-3 g daily',
-          notes: 'Often used with warm water, milk, or ghee depending on indication.',
+          notes: 'Often used with warm water, milk, or ghee depending on indication; pairing with fat may improve tolerance and traditional acceptability.',
         },
         {
           form: 'Standardized extract',
           amount: 'Varies by product',
-          notes: 'Dose depends on curcuminoid concentration and absorption enhancers.',
+          notes: 'Dose depends on curcuminoid concentration and absorption enhancers, so product labeling must be interpreted carefully.',
         },
       ],
     },
@@ -740,14 +762,14 @@ export const plantDetailsMockData: PlantDetail[] = [
     },
     identification: {
       wholePlantDescription:
-        'A small creeping succulent herb often found near water, with soft stems rooting at nodes.',
+        'A small creeping succulent herb often found near water, with soft stems rooting at nodes and a fresh watery appearance that distinguishes it from drier creeping herbs.',
       characteristics: {
         height: 'Low-growing, mat-forming habit.',
-        leaves: 'Small oblong fleshy leaves, opposite and smooth.',
+        leaves: 'Small oblong fleshy leaves, opposite, smooth, and slightly succulent to touch, with a mild bitter-green taste.',
         flowers: 'Small pale blue to whitish flowers with delicate petals.',
         fruit: 'Small capsule after flowering.',
         root: 'Fine roots emerge from creeping nodes.',
-        smell: 'Mild, green, watery-herbaceous smell.',
+        smell: 'Mild, green, watery-herbaceous smell without a strong aromatic punch.',
       },
       habitat: 'Common in marshy ground, wetlands, and shallow water margins.',
       similarPlants: [
@@ -759,10 +781,10 @@ export const plantDetailsMockData: PlantDetail[] = [
       ],
     },
     snapshot: {
-      rasa: ['Tikta', 'Kashaya'],
-      guna: ['Laghu', 'Sara'],
-      virya: 'Sheeta',
-      vipaka: 'Madhura',
+      rasa: ['Tikta (bitter; clarifies and cools)', 'Kashaya (astringent; tones and steadies)'],
+      guna: ['Laghu (light; aids clarity)', 'Sara (flow-promoting; supports subtle movement)'],
+      virya: 'Sheeta (cooling potency that reduces heat and overactivity)',
+      vipaka: 'Madhura (sweet post-digestive effect that supports steady nourishment)',
       prabhava: 'Medhya effect with calm cognitive support.',
       doshaEffect: 'Pacifies Pitta and Vata when used properly; may increase Kapha if overused in heavy constitutions.',
     },
@@ -774,20 +796,20 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         condition: 'Memory and Learning Support',
         description:
-          'Traditionally used to support recall, retention, and clarity in study-oriented or mentally fatigued individuals.',
+          'Traditionally used to support recall, retention, and clarity in study-oriented or mentally fatigued individuals. Its Medhya reputation reflects a capacity to calm mental overactivity while improving steadiness of attention over time.',
         partUsed: 'Whole plant',
         effectivenessLevel: 'Strong traditional use',
       },
       {
         condition: 'Anxiety and Restlessness',
         description:
-          'Useful where mental overactivity, irritability, or subtle anxious agitation is present.',
+          'Useful where mental overactivity, irritability, or subtle anxious agitation is present. The cooling and clarifying profile makes it especially relevant where the mind feels overheated rather than merely dull.',
         partUsed: 'Whole plant',
       },
       {
         condition: 'Sleep Disturbance',
         description:
-          'Supports calmness and may help where sleep issues are linked to overactive mental processing.',
+          'Supports calmness and may help where sleep issues are linked to overactive mental processing. It is more suitable for mentally busy, irritable, or overstimulated states than for simple physical exhaustion alone.',
         partUsed: 'Whole plant',
       },
     ],
@@ -795,42 +817,46 @@ export const plantDetailsMockData: PlantDetail[] = [
       vata: {
         effect: 'Pacifies gently',
         explanation:
-          'Helps calm mental restlessness and nervous overactivity when depletion is not dominated by cold dryness.',
+          'Helps calm mental restlessness and nervous overactivity when depletion is not dominated by cold dryness, especially when the mind is scattered but not profoundly depleted.',
       },
       kapha: {
         effect: 'May increase mildly',
         explanation:
-          'Its cooling and somewhat softening nature may not suit very heavy or sluggish Kapha states unless combined appropriately.',
+          'Its cooling and somewhat softening nature may not suit very heavy or sluggish Kapha states unless combined with more stimulating herbs that prevent further dullness.',
       },
       pitta: {
         effect: 'Pacifies',
         explanation:
-          'Its cooling, calming profile is especially useful where mental heat, irritability, or sharp overactivity is present.',
+          'Its cooling, calming profile is especially useful where mental heat, irritability, sharp overactivity, or burnout are dominant features.',
       },
     },
     dravyagunaBreakdown: [
       {
         name: 'Rasa',
         meaning: 'Tikta and Kashaya tastes.',
-        function: 'Clarifies and tones without excessive stimulation.',
+        function:
+          'Clarifies and tones without excessive stimulation, helping mental function sharpen without creating nervous agitation or heat.',
         clinicalRelevance: 'Supports use in mental overactivity and subtle inflammatory heat.',
       },
       {
         name: 'Guna',
         meaning: 'Laghu and Sara qualities.',
-        function: 'Lightness supports mental clarity and flow.',
+        function:
+          'Lightness supports mental clarity and flow, while the subtle mobile quality helps thoughts feel less stuck or congested.',
         clinicalRelevance: 'Useful in study and concentration-oriented applications.',
       },
       {
         name: 'Virya',
         meaning: 'Sheeta potency.',
-        function: 'Cools excess heat and agitation.',
+        function:
+          'Cools excess heat and agitation, supporting a calmer, less irritable nervous system and steadier cognition.',
         clinicalRelevance: 'Important in Pitta-linked irritability and mental burnout.',
       },
       {
         name: 'Vipaka',
         meaning: 'Madhura post-digestive effect.',
-        function: 'Supports nourishment and gentle steadiness over time.',
+        function:
+          'Supports nourishment and gentle steadiness over time, making the herb suitable for longer cognitive-support programs rather than quick stimulation.',
         clinicalRelevance: 'Relevant in long-term cognitive support routines.',
       },
     ],
@@ -865,25 +891,28 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         studyType: 'Clinical studies and reviews',
         findings:
-          'Bacopa extracts show supportive evidence for certain memory and information-processing outcomes, though effects are gradual rather than immediate.',
+          'Bacopa extracts show supportive evidence for certain memory and information-processing outcomes, though effects are gradual rather than immediate. Clinically this suggests a cumulative role in long-term cognitive support rather than rapid symptomatic enhancement.',
         source: 'Nootropic and herbal cognition literature',
         strength: 'Moderate',
       },
     ],
     safetyDosage: {
       contraindications: [],
-      cautions: ['May cause digestive heaviness in some users', 'Start slowly with extracts'],
+      cautions: [
+        'May cause digestive heaviness in some users, especially when Agni is weak or the preparation is rich.',
+        'Start slowly with extracts because concentrated products may be less well tolerated than whole-herb preparations.',
+      ],
       interactions: ['Use caution with sedative regimens'],
       dosage: [
         {
           form: 'Whole herb powder',
           amount: '2-5 g daily',
-          notes: 'Often given in divided doses or in ghrita-based formulations.',
+          notes: 'Often given in divided doses or in ghrita-based formulations to improve tolerance and support Medhya use.',
         },
         {
           form: 'Standardized extract',
           amount: 'Product-dependent',
-          notes: 'Typically used for cognitive-support protocols over several weeks.',
+          notes: 'Typically used for cognitive-support protocols over several weeks, as benefits are generally gradual rather than immediate.',
         },
       ],
     },
@@ -931,10 +960,10 @@ export const plantDetailsMockData: PlantDetail[] = [
     },
     identification: {
       wholePlantDescription:
-        'A fast-spreading aromatic herb with square stems and bright green serrated leaves.',
+        'A fast-spreading aromatic herb with square stems, bright green serrated leaves, and a cooling scent that becomes obvious as soon as the foliage is rubbed.',
       characteristics: {
         height: 'Usually 30-60 cm in garden conditions.',
-        leaves: 'Opposite, serrated, strongly aromatic green leaves.',
+        leaves: 'Opposite, serrated, strongly aromatic green leaves with a cool taste and slightly crisp, tender surface.',
         flowers: 'Small purple to pale lilac flowers in spikes.',
         fruit: 'Small seeds, though propagation is often vegetative.',
         root: 'Spreading rhizomatous root system.',
@@ -950,10 +979,10 @@ export const plantDetailsMockData: PlantDetail[] = [
       ],
     },
     snapshot: {
-      rasa: ['Katu', 'Tikta'],
-      guna: ['Laghu'],
-      virya: 'Sheeta',
-      vipaka: 'Katu',
+      rasa: ['Katu (pungent; stimulates lightly)', 'Tikta (bitter; cools and clears)'],
+      guna: ['Laghu (light; reduces heaviness and supports easy digestion)'],
+      virya: 'Sheeta (cooling potency that refreshes and eases heat)',
+      vipaka: 'Katu (pungent post-digestive effect that prevents excessive heaviness)',
       prabhava: 'Cooling aromatic digestive support.',
       doshaEffect: 'Pacifies Pitta and Kapha in many digestive contexts; may aggravate Vata in excess.',
     },
@@ -965,19 +994,19 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         condition: 'Indigestion',
         description:
-          'Useful in mild bloating, heaviness, and low digestive comfort where aromatic cooling support is preferred.',
+          'Useful in mild bloating, heaviness, and low digestive comfort where aromatic cooling support is preferred. It helps freshen the upper digestive tract while gently reducing heat and stagnation.',
         partUsed: 'Leaf',
       },
       {
         condition: 'Nausea',
         description:
-          'Mint leaf preparations may calm mild nausea and improve subjective freshness.',
+          'Mint leaf preparations may calm mild nausea and improve subjective freshness. The herb works best where the patient feels hot, stale, or subjectively burdened rather than cold and depleted.',
         partUsed: 'Leaf',
       },
       {
         condition: 'Heat and Mouth Freshness',
         description:
-          'Commonly used to cool the palate and provide refreshing digestive support in hot climates.',
+          'Commonly used to cool the palate and provide refreshing digestive support in hot climates. Its value is practical and sensory as well as therapeutic, particularly in summer digestive discomfort.',
         partUsed: 'Leaf',
       },
     ],
@@ -985,42 +1014,46 @@ export const plantDetailsMockData: PlantDetail[] = [
       vata: {
         effect: 'May aggravate in excess',
         explanation:
-          'Its cooling and light nature may be too reducing in cold, dry, Vata-dominant individuals.',
+          'Its cooling and light nature may be too reducing in cold, dry, Vata-dominant individuals, particularly if used frequently in concentrated forms.',
       },
       kapha: {
         effect: 'Pacifies mildly',
         explanation:
-          'Its light aromatic quality can reduce stagnation and digestive dullness.',
+          'Its light aromatic quality can reduce stagnation and digestive dullness, especially when Kapha presents as post-meal heaviness rather than deep congestion.',
       },
       pitta: {
         effect: 'Pacifies',
         explanation:
-          'The cooling effect is particularly useful in heat-related digestive discomfort.',
+          'The cooling effect is particularly useful in heat-related digestive discomfort, mouth burning, or warm-weather digestive irritability.',
       },
     },
     dravyagunaBreakdown: [
       {
         name: 'Rasa',
         meaning: 'Katu and Tikta tastes.',
-        function: 'Stimulates and clarifies while reducing heaviness.',
+        function:
+          'Stimulates and clarifies while reducing heaviness, making the herb refreshing rather than deeply heating or strongly reducing.',
         clinicalRelevance: 'Useful for mild digestive correction and freshness.',
       },
       {
         name: 'Guna',
         meaning: 'Laghu quality.',
-        function: 'Lightens digestion and relieves heaviness.',
+        function:
+          'Lightens digestion and relieves heaviness, especially after rich food or in warm climates where appetite feels dull but heat is present.',
         clinicalRelevance: 'Good for post-meal or hot-weather digestive support.',
       },
       {
         name: 'Virya',
         meaning: 'Sheeta potency.',
-        function: 'Cools heat and refreshes.',
+        function:
+          'Cools heat and refreshes, helping the body and senses feel clearer without heavy sedation.',
         clinicalRelevance: 'Important in Pitta and summer digestive use.',
       },
       {
         name: 'Vipaka',
         meaning: 'Katu post-digestive effect.',
-        function: 'Maintains light digestive stimulation after use.',
+        function:
+          'Maintains light digestive stimulation after use so the herb cools without leaving digestion excessively sluggish.',
         clinicalRelevance: 'Supports reduction of mild Kapha heaviness.',
       },
     ],
@@ -1044,20 +1077,22 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         studyType: 'Clinical and functional use literature',
         findings:
-          'Mint preparations are commonly associated with digestive comfort and cooling sensory relief, though the evidence base is condition-specific.',
+          'Mint preparations are commonly associated with digestive comfort and cooling sensory relief, though the evidence base is condition-specific. In practice, the strongest value remains mild digestive support and symptom relief rather than broad disease treatment.',
         source: 'Digestive herb literature',
         strength: 'Weak',
       },
     ],
     safetyDosage: {
       contraindications: [],
-      cautions: ['Use carefully in reflux-prone individuals'],
+      cautions: [
+        'Use carefully in reflux-prone individuals because strong mint preparations may relax the upper digestive sphincter and worsen symptoms in some people.',
+      ],
       interactions: [],
       dosage: [
         {
           form: 'Fresh leaf infusion',
           amount: '1-2 cups daily',
-          notes: 'Best suited to mild digestive or refreshing use.',
+          notes: 'Best suited to mild digestive or refreshing use and generally preferable to concentrated preparations for everyday household use.',
         },
       ],
     },
@@ -1105,14 +1140,14 @@ export const plantDetailsMockData: PlantDetail[] = [
     },
     identification: {
       wholePlantDescription:
-        'A reed-like perennial with narrow leaves and underground aromatic rhizomes that form the primary medicinal material.',
+        'A reed-like perennial with narrow leaves and underground aromatic rhizomes that form the primary medicinal material; the plant is best recognized by its pungent rhizome rather than by showy aerial parts.',
       characteristics: {
         height: 'Usually 60-120 cm.',
         leaves: 'Long narrow lanceolate leaves on pseudo-stems.',
         flowers: 'Greenish-yellow flowers with purple markings in some cultivars.',
         fruit: 'Rarely used in identification for common medicinal practice.',
-        root: 'Knotted beige rhizome with spicy pungent interior.',
-        smell: 'Sharp, warming, distinctly spicy aroma.',
+        root: 'Knotted beige rhizome with juicy or fibrous spicy pungent interior depending on freshness and age.',
+        smell: 'Sharp, warming, distinctly spicy aroma with an immediate pungent taste on the tongue.',
       },
       habitat: 'Cultivated in warm humid tropical conditions with loose fertile soil.',
       similarPlants: [
@@ -1124,10 +1159,13 @@ export const plantDetailsMockData: PlantDetail[] = [
       ],
     },
     snapshot: {
-      rasa: ['Katu'],
-      guna: ['Laghu', 'Snigdha'],
-      virya: 'Ushna',
-      vipaka: 'Madhura',
+      rasa: ['Katu (pungent; stimulates digestion and breaks stagnation)'],
+      guna: [
+        'Laghu (light; reduces heaviness and sluggishness)',
+        'Snigdha (mildly unctuous; prevents excessive harshness)',
+      ],
+      virya: 'Ushna (warming potency that kindles Agni and improves circulation)',
+      vipaka: 'Madhura (sweet post-digestive effect that softens its pungent intensity over time)',
       prabhava: 'Agni-supporting deepana-pachana action.',
       doshaEffect: 'Pacifies Vata and Kapha; may aggravate Pitta in excess.',
     },
@@ -1139,21 +1177,21 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         condition: 'Poor Digestion',
         description:
-          'Used to improve appetite, kindle digestive fire, and reduce heaviness and sluggish post-meal digestion.',
+          'Used to improve appetite, kindle digestive fire, and reduce heaviness and sluggish post-meal digestion. Its pungent warming action helps digest Ama-like accumulation and restore movement in a cold or slow digestive system.',
         partUsed: 'Rhizome',
         effectivenessLevel: 'Strong traditional use',
       },
       {
         condition: 'Nausea',
         description:
-          'Supports nausea relief in a variety of contexts through warming aromatic action.',
+          'Supports nausea relief in a variety of contexts through warming aromatic action. This is clinically relevant because ginger can settle the stomach while also improving digestive directionality instead of merely suppressing sensation.',
         partUsed: 'Rhizome',
         effectivenessLevel: 'Moderate support',
       },
       {
         condition: 'Cold and Congestion',
         description:
-          'Useful in respiratory conditions characterized by coldness, mucus, and sluggish circulation.',
+          'Useful in respiratory conditions characterized by coldness, mucus, and sluggish circulation. By warming and mobilizing Kapha, it helps transform a heavy congested presentation into a more active clearing response.',
         partUsed: 'Rhizome',
       },
     ],
@@ -1161,42 +1199,46 @@ export const plantDetailsMockData: PlantDetail[] = [
       vata: {
         effect: 'Pacifies',
         explanation:
-          'Its warmth and mild unctuousness help address cold, weak, and irregular digestive Vata patterns.',
+          'Its warmth and mild unctuousness help address cold, weak, and irregular digestive Vata patterns, especially where gas, chill, and poor appetite appear together.',
       },
       kapha: {
         effect: 'Pacifies strongly',
         explanation:
-          'The pungent heating action reduces heaviness, mucus, and sluggishness effectively.',
+          'The pungent heating action reduces heaviness, mucus, and sluggishness effectively, making ginger one of the more direct Kapha-reducing household herbs.',
       },
       pitta: {
         effect: 'May aggravate',
         explanation:
-          'Its strong heating nature can worsen heat, burning, or reflux in Pitta-dominant constitutions.',
+          'Its strong heating nature can worsen heat, burning, reflux, or inflammatory sensitivity in Pitta-dominant constitutions, particularly in dry powdered form.',
       },
     },
     dravyagunaBreakdown: [
       {
         name: 'Rasa',
         meaning: 'Katu taste.',
-        function: 'Stimulates, disperses, and activates.',
+        function:
+          'Stimulates, disperses, and activates by improving Agni, circulation, and the breakdown of cold, damp, stagnant states.',
         clinicalRelevance: 'Central to its use in Agni and Ama conditions.',
       },
       {
         name: 'Guna',
         meaning: 'Laghu and Snigdha qualities.',
-        function: 'Lightens heaviness while retaining some softness and flow.',
+        function:
+          'Lightens heaviness while retaining some softness and flow, which helps ginger remain effective without becoming purely desiccating.',
         clinicalRelevance: 'Makes it warming yet broadly usable in digestive care.',
       },
       {
         name: 'Virya',
         meaning: 'Ushna potency.',
-        function: 'Warms the body and stimulates circulation and metabolism.',
+        function:
+          'Warms the body and stimulates circulation and metabolism, helping tissues that are cold, congested, or sluggish become more responsive.',
         clinicalRelevance: 'Important in cold, congested, Kapha-heavy conditions.',
       },
       {
         name: 'Vipaka',
         meaning: 'Madhura post-digestive effect.',
-        function: 'Balances its pungency with a more nourishing end-effect.',
+        function:
+          'Balances its pungency with a more nourishing end-effect, which partly explains why ginger is broadly tolerated in culinary and therapeutic use.',
         clinicalRelevance: 'Helps explain its broader tolerance compared with more purely reducing herbs.',
       },
     ],
@@ -1231,25 +1273,27 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         studyType: 'Clinical studies and reviews',
         findings:
-          'Ginger has supportive evidence for nausea management and some digestive applications, with a clearer modern evidence base than many culinary herbs.',
+          'Ginger has supportive evidence for nausea management and some digestive applications, with a clearer modern evidence base than many culinary herbs. This makes it one of the better bridges between traditional digestive practice and contemporary symptom-focused research.',
         source: 'Clinical digestive literature',
         strength: 'Moderate',
       },
     ],
     safetyDosage: {
       contraindications: [],
-      cautions: ['Use carefully in reflux, burning sensation, or heat-dominant constitutions'],
+      cautions: [
+        'Use carefully in reflux, burning sensation, or heat-dominant constitutions because its warming intensity may aggravate symptoms.',
+      ],
       interactions: ['Potential additive effect with anticoagulant therapies'],
       dosage: [
         {
           form: 'Fresh ginger',
           amount: 'Small daily culinary to medicinal amounts',
-          notes: 'Often used before meals or in tea.',
+          notes: 'Often used before meals or in tea, especially when appetite is low and digestion feels cold or sluggish.',
         },
         {
           form: 'Dry powder',
           amount: '1-3 g daily',
-          notes: 'More heating than fresh form and should be individualized.',
+          notes: 'More heating than fresh form and should be individualized carefully in Pitta-prone or reflux-prone patients.',
         },
       ],
     },
@@ -1297,14 +1341,14 @@ export const plantDetailsMockData: PlantDetail[] = [
     },
     identification: {
       wholePlantDescription:
-        'A Himalayan alpine herb with a tufted habit and aromatic rhizomatous roots valued medicinally.',
+        'A Himalayan alpine herb with a tufted habit and aromatic rhizomatous roots valued medicinally; the root mass is the main identifying and therapeutic feature rather than the relatively delicate aerial growth.',
       characteristics: {
         height: 'Usually low-growing in alpine conditions.',
-        leaves: 'Basal leaves with elongated form; upper leaves smaller.',
+        leaves: 'Basal leaves with elongated form and a finer mountain-herb appearance; upper leaves remain smaller and less prominent.',
         flowers: 'Pinkish to pale purple clustered flowers.',
         fruit: 'Small dry fruit after flowering.',
         root: 'Aromatic dark rhizome and root mass, the main medicinal part.',
-        smell: 'Deep earthy, musky, calming aroma.',
+        smell: 'Deep earthy, musky, calming aroma with a bitter-aromatic taste in the root.',
       },
       habitat:
         'Native to Himalayan high altitudes in cool rocky environments.',
@@ -1317,10 +1361,10 @@ export const plantDetailsMockData: PlantDetail[] = [
       ],
     },
     snapshot: {
-      rasa: ['Tikta', 'Kashaya'],
-      guna: ['Laghu', 'Snigdha'],
-      virya: 'Sheeta',
-      vipaka: 'Katu',
+      rasa: ['Tikta (bitter; clarifies and cools)', 'Kashaya (astringent; steadies and tones)'],
+      guna: ['Laghu (light; clears mental heaviness)', 'Snigdha (softening; helps calm rather than dry)'],
+      virya: 'Sheeta (cooling potency that reduces irritation and mental heat)',
+      vipaka: 'Katu (pungent post-digestive effect that preserves subtle clarity)',
       prabhava: 'Calming action on mind and sleep quality.',
       doshaEffect: 'Pacifies Pitta and Kapha and helps calm disturbed Vata in the mind.',
     },
@@ -1332,20 +1376,20 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         condition: 'Insomnia',
         description:
-          'Supports sleep quality and mental quieting in patients with restlessness, irritability, or overactive thought patterns.',
+          'Supports sleep quality and mental quieting in patients with restlessness, irritability, or overactive thought patterns. Its cooling and aromatic qualities help settle heated mental activity rather than forcing sleep through heaviness alone.',
         partUsed: 'Root and rhizome',
         effectivenessLevel: 'Traditional support',
       },
       {
         condition: 'Anxiety and Mental Restlessness',
         description:
-          'Used where the mind is unsettled, overstimulated, or emotionally labile.',
+          'Used where the mind is unsettled, overstimulated, or emotionally labile. It is most suitable when anxiety has a restless, heated, or sensory-overloaded character rather than a purely cold, depleted presentation.',
         partUsed: 'Root and rhizome',
       },
       {
         condition: 'Stress-related Fatigue',
         description:
-          'Supports recovery when nervous depletion is accompanied by poor rest and emotional strain.',
+          'Supports recovery when nervous depletion is accompanied by poor rest and emotional strain. Its role is to calm the mind while making recuperation more possible through improved restfulness and reduced inner agitation.',
         partUsed: 'Root and rhizome',
       },
     ],
@@ -1353,42 +1397,46 @@ export const plantDetailsMockData: PlantDetail[] = [
       vata: {
         effect: 'Calms disturbed mental Vata',
         explanation:
-          'Its grounding aromatic action helps steady the mind and improve restfulness.',
+          'Its grounding aromatic action helps steady the mind and improve restfulness, especially when Vata is disturbed in the manovaha dimension rather than the body alone.',
       },
       kapha: {
         effect: 'Pacifies mildly',
         explanation:
-          'Useful where dullness coexists with emotional heaviness, though it is not primarily a reducing herb.',
+          'Useful where dullness coexists with emotional heaviness, though it is not primarily a reducing herb and works better for subtle mental clouding than for gross Kapha accumulation.',
       },
       pitta: {
         effect: 'Pacifies',
         explanation:
-          'Its cooling calming nature makes it especially relevant in heated mental states and irritability.',
+          'Its cooling calming nature makes it especially relevant in heated mental states, irritability, agitation, and disturbed sleep linked with Pitta excess.',
       },
     },
     dravyagunaBreakdown: [
       {
         name: 'Rasa',
         meaning: 'Tikta and Kashaya tastes.',
-        function: 'Clarifies and tones the system while reducing excess heat.',
+        function:
+          'Clarifies and tones the system while reducing excess heat, especially in the mind and subtle channels associated with emotional agitation.',
         clinicalRelevance: 'Useful in agitated, heat-linked mental patterns.',
       },
       {
         name: 'Guna',
         meaning: 'Laghu and Snigdha qualities.',
-        function: 'Balances lightness with softening support.',
+        function:
+          'Balances lightness with softening support so the herb calms without becoming excessively drying or mentally dulling.',
         clinicalRelevance: 'Helps calm without being overly drying.',
       },
       {
         name: 'Virya',
         meaning: 'Sheeta potency.',
-        function: 'Cools and settles overactivity.',
+        function:
+          'Cools and settles overactivity, helping sleep, emotional steadiness, and sensory quieting in agitated constitutions.',
         clinicalRelevance: 'Important in irritability, insomnia, and mental heat.',
       },
       {
         name: 'Vipaka',
         meaning: 'Katu post-digestive effect.',
-        function: 'Retains subtle clearing action after digestion.',
+        function:
+          'Retains subtle clearing action after digestion, supporting calm clarity rather than heaviness after repeated use.',
         clinicalRelevance: 'Supports mental clarity along with calming action.',
       },
     ],
@@ -1418,20 +1466,23 @@ export const plantDetailsMockData: PlantDetail[] = [
       {
         studyType: 'Preclinical and limited clinical literature',
         findings:
-          'Preliminary evidence suggests calming and neuroprotective potential, but robust human evidence remains limited.',
+          'Preliminary evidence suggests calming and neuroprotective potential, but robust human evidence remains limited. Clinically, this means it remains more strongly supported by traditional use than by modern high-quality human trials.',
         source: 'Emerging medicinal herb literature',
         strength: 'Weak',
       },
     ],
     safetyDosage: {
       contraindications: [],
-      cautions: ['Use carefully with sedative medications', 'Prioritize sustainable sourcing'],
+      cautions: [
+        'Use carefully with sedative medications because additive calming effects are possible in sensitive individuals.',
+        'Prioritize sustainable sourcing because ecological pressure is a real practical concern for this Himalayan species.',
+      ],
       interactions: ['Potential additive calming effect with sedatives'],
       dosage: [
         {
           form: 'Powder',
           amount: 'Practitioner-guided small doses',
-          notes: 'Typically used in calming or sleep-oriented protocols.',
+          notes: 'Typically used in calming or sleep-oriented protocols and is best individualized because strong aroma and nervous-system effects vary by patient.',
         },
       ],
     },

@@ -22,8 +22,8 @@ const PlantImage = ({ image, name, gallery }: PlantImageProps) => {
     : []
 
   return (
-    <div className="group overflow-hidden rounded-[32px] border border-white/70 bg-white/70 p-4 shadow-[0_24px_80px_rgba(15,23,42,0.10)] backdrop-blur-xl transition duration-300 hover:shadow-[0_28px_90px_rgba(15,23,42,0.14)]">
-      <div className="relative overflow-hidden rounded-[28px]">
+    <div className="group overflow-hidden rounded-3xl border border-white/70 bg-white/80 p-4 shadow-md shadow-slate-950/5 backdrop-blur-xl transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-950/10">
+      <div className="relative overflow-hidden rounded-3xl">
         <ImageWithFallback
           src={image}
           fallbackSrc={fallbackImage}
@@ -34,16 +34,19 @@ const PlantImage = ({ image, name, gallery }: PlantImageProps) => {
       </div>
 
       {galleryEntries.length > 0 && (
-        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {galleryEntries.map((entry) => (
-            <div key={entry.label} className="overflow-hidden rounded-[22px] bg-white/80 p-2">
+            <div
+              key={entry.label}
+              className="overflow-hidden rounded-2xl border border-slate-100 bg-white/90 p-2 shadow-sm transition duration-200 hover:shadow-md"
+            >
               <ImageWithFallback
                 src={entry.src}
                 fallbackSrc={fallbackImage}
                 alt={`${name} ${entry.label}`}
-                className="aspect-square w-full rounded-[16px] object-cover"
+                className="aspect-square w-full rounded-xl object-cover"
               />
-              <p className="mt-2 text-center text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+              <p className="mt-2 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                 {entry.label}
               </p>
             </div>
