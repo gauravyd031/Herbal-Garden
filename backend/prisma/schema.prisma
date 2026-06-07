@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  runtime  = "cloudflare"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  name         String
+  email        String   @unique
+  passwordHash String
+
+  favorites    Favorite[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  role         Role @default(USER)
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+
+  plants      Plant[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Plant {
+  id              String   @id @default(cuid())
+  name            String   @unique
+  slug            String   @unique
+  scientificName  String?  @unique
+  description     String   @db.Text
+  benefits        String[]
+  uses            String[]
+
+  imageUrl        String?
+  
+  sunlight        String?
+  watering        String?
+  soilType        String?
+
+  categoryId      String
+  category        Category @relation(fields: [categoryId], references: [id])
+  favorites       Favorite[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([name])
+  @@index([slug])
+  @@index([scientificName])
+  @@index([categoryId])
+}
+
+model Favorite {
+  userId    String
+  plantId   String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plant     Plant    @relation(fields: [plantId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@id([userId, plantId])
+}
+
+
+enum Role {
+  USER
+  ADMIN
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@adarsh31/common-herbal-app",
+  "version": "1.0.0",
+  "description": "Shared Zod schemas and TypeScript types for Herbal Garden",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adarsh",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "zod": "^4.4.3"
+  }
+}
