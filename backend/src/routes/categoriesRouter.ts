@@ -3,6 +3,16 @@ import { getPrisma } from "../db/prisma";
 import { getPagination } from "../utils/pagination";
 
 
+const formatPlant = (plant: any) => {
+    if (!plant) return null;
+    return {
+        ...plant,
+        image: plant.imageUrl ?? "",
+        category: plant.category?.name ?? "",
+        categoryDetails: plant.category
+    };
+};
+
 export const categoriesRouter = new Hono<{
     Bindings: {
         DATABASE_URL: string
@@ -95,6 +105,7 @@ categoriesRouter.get("/:identifier/plants", async (c) => {
                     slug: true,
                     scientificName: true,
                     imageUrl: true,
+                    summary: true,
 
                     category: {
                         select: {
@@ -116,6 +127,7 @@ categoriesRouter.get("/:identifier/plants", async (c) => {
         ]);
 
         const totalPages = Math.ceil(total / limit);
+        const formattedPlants = plants.map(formatPlant);
 
         return c.json({
             category: {
@@ -124,7 +136,7 @@ categoriesRouter.get("/:identifier/plants", async (c) => {
                 slug: category.slug,
                 description: category.description
             },
-            plants,
+            plants: formattedPlants,
             pagination: {
                 page,
                 limit,

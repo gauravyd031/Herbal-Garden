@@ -9,6 +9,10 @@ generator client {
   output   = "../src/generated/prisma"
 }
 
+generator client_node {
+  provider = "prisma-client-js"
+}
+
 datasource db {
   provider = "postgresql"
 }
@@ -59,6 +63,31 @@ model Plant {
   favorites       Favorite[]
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
+
+  summary       String?
+  tagline       String?
+
+  hindiName     String?
+  family        String?
+  region        String?
+
+  caution       String?
+
+  partsUsed     String[] @default([])
+  careTips      String[] @default([])
+  synonyms      String[] @default([])
+  categoryTags  String[] @default([])
+
+  featured      Boolean @default(false)
+
+  difficulty    String?
+  growthRate    String?
+  season        String?
+
+  images        Json?
+  identification Json?
+  modernResearch Json?
+  safetyDosage   Json?
 
   @@index([name])
   @@index([slug])

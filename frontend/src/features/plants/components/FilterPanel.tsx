@@ -1,5 +1,6 @@
-import { plantCategories } from '../data/plants.mock'
 import type { PlantCategory } from '../types/plant.types'
+
+const plantCategories = ['All', 'Medicinal', 'Herbs', 'Roots'] as const
 
 type FilterPanelProps = {
   activeCategory: PlantCategory

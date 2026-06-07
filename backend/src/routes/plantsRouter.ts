@@ -34,6 +34,16 @@ const requireAdmin = (c: Context<AppEnv>) => {
 const isUniqueConstraintError = (e: unknown) =>
     e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002";
 
+const formatPlant = (plant: any) => {
+    if (!plant) return null;
+    return {
+        ...plant,
+        image: plant.imageUrl ?? "",
+        category: plant.category?.name ?? "",
+        categoryDetails: plant.category
+    };
+};
+
 export const plantsRouter = new Hono<AppEnv>();
 
 plantsRouter.get("/", async (c) => {
@@ -82,6 +92,7 @@ plantsRouter.get("/", async (c) => {
                     slug: true,
                     scientificName: true,
                     imageUrl: true,
+                    summary: true,
 
                     category: {
                         select: {
@@ -106,8 +117,10 @@ plantsRouter.get("/", async (c) => {
             })
         ]);
 
+        const formattedPlants = plants.map(formatPlant);
+
         return c.json({
-            plants,
+            plants: formattedPlants,
 
             pagination: {
                 page,
@@ -168,7 +181,11 @@ plantsRouter.post("/", authMiddleware, async (c) => {
             }
         });
 
-        return c.json({ plant }, 201);
+        const formatted = formatPlant(plant);
+        return c.json({
+            ...formatted,
+            plant: formatted
+        }, 201);
     } catch (e) {
         console.error("Create plant error:", e);
         if (isUniqueConstraintError(e)) {
@@ -179,14 +196,17 @@ plantsRouter.post("/", authMiddleware, async (c) => {
     }
 })
 
-plantsRouter.get("/:slug", async (c) => {
-    const slug = c.req.param("slug");
+plantsRouter.get("/:identifier", async (c) => {
+    const identifier = c.req.param("identifier");
 
     try {
         const prisma = getPrisma(c.env.DATABASE_URL);
-        const plant = await prisma.plant.findUnique({
+        const plant = await prisma.plant.findFirst({
             where: {
-                slug
+                OR: [
+                    { id: identifier },
+                    { slug: identifier }
+                ]
             },
 
             include: {
@@ -208,8 +228,10 @@ plantsRouter.get("/:slug", async (c) => {
             );
         }
 
+        const formatted = formatPlant(plant);
         return c.json({
-            plant
+            ...formatted,
+            plant: formatted
         });
     } catch {
         c.status(500)
@@ -273,7 +295,11 @@ plantsRouter.patch("/:id", authMiddleware, async (c) => {
             }
         });
 
-        return c.json({ plant });
+        const formatted = formatPlant(plant);
+        return c.json({
+            ...formatted,
+            plant: formatted
+        });
     } catch (e) {
         console.error("Update plant error:", e);
         if (isUniqueConstraintError(e)) {

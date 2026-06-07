@@ -15,60 +15,74 @@ type AppEnv = {
     }
 }
 
-export const favoritesRouter = new Hono<AppEnv>();
+export const favouritesRouter = new Hono<AppEnv>();
+
+const formatPlant = (plant: any) => {
+    if (!plant) return null;
+    return {
+        ...plant,
+        image: plant.imageUrl ?? "",
+        category: plant.category?.name ?? "",
+        categoryDetails: plant.category
+    };
+};
 
 const isRecordNotFoundError = (e: unknown) =>
     e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2025";
 
-favoritesRouter.get("/", authMiddleware, async (c) => {
+favouritesRouter.get("/", authMiddleware, async (c) => {
     const userId = c.get("userId");
     const { page, limit } = getPagination(c.req.query("page"), c.req.query("limit"));
 
     try {
         const prisma = getPrisma(c.env.DATABASE_URL);
-        const [favorites, total] = await Promise.all([
-            prisma.favorite.findMany({
-                where: {
-                    userId
-                },
-                select: {
-                    createdAt: true,
+        const favorites = await prisma.favorite.findMany({
+            where: {
+                userId
+            },
+            select: {
+                createdAt: true,
 
-                    plant: {
-                        select: {
-                            id: true,
-                            name: true,
-                            slug: true,
-                            scientificName: true,
-                            imageUrl: true,
+                plant: {
+                    select: {
+                        id: true,
+                        name: true,
+                        slug: true,
+                        scientificName: true,
+                        imageUrl: true,
+                        summary: true,
 
-                            category: {
-                                select: {
-                                    id: true,
-                                    name: true,
-                                    slug: true
-                                }
+                        category: {
+                            select: {
+                                id: true,
+                                name: true,
+                                slug: true
                             }
                         }
                     }
-                },
-                skip: (page - 1) * limit,
-                take: limit,
-                orderBy: {
-                    createdAt: "desc"
                 }
-            }),
-            prisma.favorite.count({
-                where: {
-                    userId
-                }
-            })
-        ]);
+            },
+            skip: (page - 1) * limit,
+            take: limit,
+            orderBy: {
+                createdAt: "desc"
+            }
+        });
+
+        const total = await prisma.favorite.count({
+            where: {
+                userId
+            }
+        });
 
         const totalPages = Math.ceil(total / limit);
+        const formattedFavorites = (favorites as any[]).map(fav => ({
+            ...fav,
+            plant: formatPlant(fav.plant)
+        }));
 
         return c.json({
-            favorites,
+            favorites: formattedFavorites,
             pagination: {
                 page,
                 limit,
@@ -84,7 +98,7 @@ favoritesRouter.get("/", authMiddleware, async (c) => {
     }
 })
 
-favoritesRouter.get("/:plantId", authMiddleware, async (c) => {
+favouritesRouter.get("/:plantId", authMiddleware, async (c) => {
     const userId = c.get("userId");
     const plantId = c.req.param("plantId");
 
@@ -115,7 +129,7 @@ favoritesRouter.get("/:plantId", authMiddleware, async (c) => {
     }
 })
 
-favoritesRouter.post("/:plantId", authMiddleware, async (c) => {
+favouritesRouter.post("/:plantId", authMiddleware, async (c) => {
     const userId = c.get("userId");
     const plantId = c.req.param("plantId");
 
@@ -162,14 +176,19 @@ favoritesRouter.post("/:plantId", authMiddleware, async (c) => {
             }
         });
 
-        return c.json({ favorite }, 201);
+        const formattedFavorite = {
+            ...favorite,
+            plant: formatPlant(favorite.plant)
+        };
+
+        return c.json({ favorite: formattedFavorite }, 201);
     } catch (e) {
         console.error("Create favorite error:", e);
         return c.json({ message: "Internal server error" }, 500);
     }
 })
 
-favoritesRouter.delete("/:plantId", authMiddleware, async (c) => {
+favouritesRouter.delete("/:plantId", authMiddleware, async (c) => {
     const userId = c.get("userId");
     const plantId = c.req.param("plantId");
 

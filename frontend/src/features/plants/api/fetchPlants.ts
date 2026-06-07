@@ -1,4 +1,4 @@
-import { plantsMockData } from '../data/plants.mock'
+import { apiClient } from '../../../shared/api/apiClient'
 import type { Plant } from '../types/plant.types'
 
 type FetchPlantsOptions = {
@@ -6,18 +6,6 @@ type FetchPlantsOptions = {
 }
 
 export const fetchPlants = async ({ signal }: FetchPlantsOptions = {}): Promise<Plant[]> => {
-  await new Promise<void>((resolve, reject) => {
-    const timeoutId = window.setTimeout(resolve, 650)
-
-    signal?.addEventListener(
-      'abort',
-      () => {
-        window.clearTimeout(timeoutId)
-        reject(new DOMException('The request was aborted.', 'AbortError'))
-      },
-      { once: true },
-    )
-  })
-
-  return plantsMockData
+  const response = await apiClient.get('/plants', { signal })
+  return response.data.plants as Plant[]
 }
